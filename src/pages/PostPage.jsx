@@ -3,9 +3,12 @@ import axios from "axios"
 import { useParams } from "react-router-dom";
 import { formatISO9075 } from "date-fns";
 import { Link } from "react-router-dom";
+import { useCookies } from "react-cookie";
+
 export default function PostPage(){
     const[postinfo,setPostinfo]=useState(null);
    const {id}=useParams();
+    const[cookie,setCookies]=useCookies(["access-tokens"])
     useEffect(()=>{
         async function postInfo(){
             try{
