@@ -10,7 +10,7 @@ export default function PostPage(){
         async function postInfo(){
             try{
 
-                const response = await axios.get(`http://localhost:4000/post/${id}`);
+                const response = await axios.get(`https://blog-backend-fu1c.onrender.com/post/${id}`);
                 setPostinfo(response.data)
                 console.log(response.data)
             }catch(error){
