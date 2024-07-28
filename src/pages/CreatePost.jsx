@@ -47,7 +47,7 @@ export default function CreatePost(){
         data.set('file',files[0]);
         
         console.log(author)
-        const response=await axios.post('http://localhost:4000/post',data)
+        const response=await axios.post('https://blog-backend-fu1c.onrender.com/post',data)
         console.log(response.data)
         console.log(files)
         alert("New Post has been Created!!")
