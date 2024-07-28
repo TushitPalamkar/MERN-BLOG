@@ -5,7 +5,7 @@ export default function IndexPage(){
     const[post,setPosts]=useState([]);
     useEffect(()=>{
         const fetchposts=async()=>{
-            const response=await axios.get("http://localhost:4000/post")
+            const response=await axios.get("https://blog-backend-fu1c.onrender.com/post")
             setPosts(response.data)    
         }
         fetchposts()
