@@ -6,7 +6,7 @@ export default function RegisterPage(){
    async function register(event){
         event.preventDefault();
         try{
-            const response=await axios.post('http://localhost:4000/register',{username,password})
+            const response=await axios.post('https://blog-backend-fu1c.onrender.com/register',{username,password})
             console.log(response.data)
             alert('Registration Completed! Now Login')
 
