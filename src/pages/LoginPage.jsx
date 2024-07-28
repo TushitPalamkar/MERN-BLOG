@@ -10,7 +10,7 @@ export default function LoginPage(){
     async function login(event){
         event.preventDefault();
         try{
-            const response=await axios.post('http://localhost:4000/login',{username,password},{withCredentials:true});
+            const response=await axios.post('https://blog-backend-fu1c.onrender.com/login',{username,password},{withCredentials:true});
             console.log(response.data)
             setCookies("access-tokens",response.data.token)
             window.localStorage.setItem("userID",response.data.userID)
