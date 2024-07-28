@@ -18,7 +18,7 @@ export default function EditPage(){
         {
             async function editpost(){
                 try{
-                    const response = await axios.get(`http://localhost:4000/post/${id}`);
+                    const response = await axios.get(`https://blog-backend-fu1c.onrender.com/post/${id}`);
                 setPostinfo(response.data)
                 setTitle(postinfo.title)
                 setSummary(postinfo.summary)
@@ -70,7 +70,7 @@ export default function EditPage(){
         data.set('file',files[0]);
         try{
 
-            const response=await axios.put(`http://localhost:4000/editpost/${id}`,data)
+            const response=await axios.put(`https://blog-backend-fu1c.onrender.com/editpost/${id}`,data)
             console.log(response.data)
             console.log(author)
        
