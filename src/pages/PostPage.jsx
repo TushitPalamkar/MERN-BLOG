@@ -34,7 +34,7 @@ export default function PostPage(){
 
                 </Link>
                 <div className="image">
-                    <img src={`http://localhost:4000/${postinfo.cover}`} alt="image"/>
+                    <img src={`https://blog-backend-fu1c.onrender.com/${postinfo.cover}`} alt="image"/>
                 </div>
                 
                     <div dangerouslySetInnerHTML={{__html:postinfo.content}}></div>
